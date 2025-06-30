@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_blocks_services",
+  "info": {
+    "displayName": "Services",
+    "icon": "briefcase"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "component",
+      "component": "elements.icon-with-caption",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}

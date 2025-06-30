@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_blocks_hero_sections",
+  "info": {
+    "displayName": "HeroSection"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

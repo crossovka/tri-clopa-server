@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_elements_icon_with_captions",
+  "info": {
+    "displayName": "iconWithCaption"
+  },
+  "options": {},
+  "attributes": {
+    "caption": {
+      "type": "string",
+      "default": "Травим",
+      "required": true,
+      "unique": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

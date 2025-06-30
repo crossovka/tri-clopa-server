@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blocks_processes",
+  "info": {
+    "displayName": "process"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "component",
+      "component": "elements.icon-with-caption",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blocks_faqs",
+  "info": {
+    "displayName": "faq",
+    "icon": "search"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "component",
+      "component": "elements.spoller",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

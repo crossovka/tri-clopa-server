@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_layout_headers",
+  "info": {
+    "displayName": "Header"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "richtext",
+      "required": true,
+      "default": "Три клопа"
+    },
+    "navigation": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_blocks_headings",
+  "info": {
+    "displayName": "Heading"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "isCentered": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "level": {
+      "type": "enumeration",
+      "required": true,
+      "default": "h3",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5"
+      ]
+    },
+    "isCapital": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    }
+  },
+  "config": {}
+}

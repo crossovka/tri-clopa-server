@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_contacts",
+  "info": {
+    "displayName": "Contacts"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}
