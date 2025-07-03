@@ -2,15 +2,12 @@ version: '3.8'
 
 services:
   strapi:
-    image: node:20
+    build: .
     container_name: strapi-app
-    working_dir: /srv/app
-    command: sh -c "yarn install && yarn build && yarn start"
     ports:
       - '1337:1337'
     volumes:
-      - ./app:/srv/app
-      - ./app/node_modules:/srv/app/node_modules
+      - ./:/srv/app
     env_file:
       - .env
     restart: always
