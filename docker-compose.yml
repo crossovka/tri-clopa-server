@@ -6,8 +6,7 @@ services:
     container_name: strapi-app
     ports:
       - '1337:1337'
-    volumes:
-      - ./:/srv/app
     env_file:
       - .env
     restart: always
+    user: root
