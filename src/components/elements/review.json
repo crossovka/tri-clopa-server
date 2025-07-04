@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_elements_reviews",
+  "info": {
+    "displayName": "review",
+    "icon": "brush"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

@@ -110,6 +110,16 @@ export interface BlocksProcess extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksReviews extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_reviews';
+  info: {
+    displayName: 'reviews';
+  };
+  attributes: {
+    reviews: Schema.Attribute.Component<'elements.review', true>;
+  };
+}
+
 export interface BlocksServices extends Struct.ComponentSchema {
   collectionName: 'components_blocks_services';
   info: {
@@ -177,6 +187,19 @@ export interface ElementsLink extends Struct.ComponentSchema {
     href: Schema.Attribute.String & Schema.Attribute.Required;
     isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     text: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ElementsReview extends Struct.ComponentSchema {
+  collectionName: 'components_elements_reviews';
+  info: {
+    displayName: 'review';
+    icon: 'brush';
+  };
+  attributes: {
+    city: Schema.Attribute.String & Schema.Attribute.Required;
+    content: Schema.Attribute.RichText & Schema.Attribute.Required;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -285,11 +308,13 @@ declare module '@strapi/strapi' {
       'blocks.paragraph': BlocksParagraph;
       'blocks.paragraph-with-image': BlocksParagraphWithImage;
       'blocks.process': BlocksProcess;
+      'blocks.reviews': BlocksReviews;
       'blocks.services': BlocksServices;
       'blocks.trust': BlocksTrust;
       'elements.button': ElementsButton;
       'elements.icon-with-caption': ElementsIconWithCaption;
       'elements.link': ElementsLink;
+      'elements.review': ElementsReview;
       'elements.spoller': ElementsSpoller;
       'elements.text': ElementsText;
       'layout.footer': LayoutFooter;

@@ -24,7 +24,8 @@
         "blocks.trust",
         "blocks.process",
         "blocks.faq",
-        "blocks.image"
+        "blocks.image",
+        "blocks.reviews"
       ]
     },
     "seo": {

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blocks_reviews",
+  "info": {
+    "displayName": "reviews"
+  },
+  "options": {},
+  "attributes": {
+    "reviews": {
+      "type": "component",
+      "component": "elements.review",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
