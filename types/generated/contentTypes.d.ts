@@ -443,6 +443,49 @@ export interface ApiContactContact extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiGlobalBlockGlobalBlock extends Struct.SingleTypeSchema {
+  collectionName: 'global_blocks';
+  info: {
+    displayName: 'Global-block';
+    pluralName: 'global-blocks';
+    singularName: 'global-block';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blocks: Schema.Attribute.DynamicZone<
+      [
+        'blocks.trust',
+        'blocks.services',
+        'blocks.reviews',
+        'blocks.process',
+        'blocks.paragraph',
+        'blocks.paragraph-with-image',
+        'blocks.info',
+        'blocks.image',
+        'blocks.hero-section',
+        'blocks.heading',
+        'blocks.faq',
+        'blocks.contacts',
+      ]
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::global-block.global-block'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -1143,6 +1186,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::article.article': ApiArticleArticle;
       'api::contact.contact': ApiContactContact;
+      'api::global-block.global-block': ApiGlobalBlockGlobalBlock;
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::page.page': ApiPagePage;

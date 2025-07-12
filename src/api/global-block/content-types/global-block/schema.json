@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "global_blocks",
+  "info": {
+    "singularName": "global-block",
+    "pluralName": "global-blocks",
+    "displayName": "Global-block"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.trust",
+        "blocks.services",
+        "blocks.reviews",
+        "blocks.process",
+        "blocks.paragraph",
+        "blocks.paragraph-with-image",
+        "blocks.info",
+        "blocks.image",
+        "blocks.hero-section",
+        "blocks.heading",
+        "blocks.faq",
+        "blocks.contacts"
+      ]
+    }
+  }
+}

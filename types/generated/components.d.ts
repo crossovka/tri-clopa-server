@@ -116,7 +116,11 @@ export interface BlocksReviews extends Struct.ComponentSchema {
     displayName: 'reviews';
   };
   attributes: {
+    globalKey: Schema.Attribute.String;
     reviews: Schema.Attribute.Component<'elements.review', true>;
+    useGlobal: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
   };
 }
 

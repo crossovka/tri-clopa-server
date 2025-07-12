@@ -9,6 +9,14 @@
       "type": "component",
       "component": "elements.review",
       "repeatable": true
+    },
+    "useGlobal": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "globalKey": {
+      "type": "string"
     }
   },
   "config": {}
