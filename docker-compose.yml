@@ -10,3 +10,9 @@ services:
       - .env
     restart: always
     user: root
+    volumes:
+      # Пути должны соответствовать Dockerfile (/srv/app)
+      - ./sqlite_data:/srv/app/.tmp
+      - ./public/uploads:/srv/app/public/uploads
+    environment:
+      - NODE_ENV=production
