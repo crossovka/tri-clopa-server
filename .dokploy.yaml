@@ -1,0 +1,26 @@
+# .dokploy.yaml в корне проекта
+version: '3.8'
+
+services:
+  strapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: strapi-app
+    ports:
+      - '1337:1337'
+    env_file:
+      - .env.production
+    restart: unless-stopped
+    volumes:
+      - ./sqlite_data:/srv/app/.tmp
+      - ./public/uploads:/srv/app/public/uploads
+      - ./config:/srv/app/config
+    environment:
+      NODE_ENV: production
+    networks:
+      - dokploy-network
+
+networks:
+  dokploy-network:
+    external: true
