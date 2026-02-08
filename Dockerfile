@@ -1,20 +1,32 @@
+# ===== STAGE 1: Build admin =====
+FROM node:20-alpine AS builder
+
+WORKDIR /srv/app
+
+# Кэшируем зависимости
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
+
+# Копируем все исходники
+COPY . .
+
+# Собираем Strapi (admin + backend)
+RUN yarn build
+
+# ===== STAGE 2: Production =====
 FROM node:20-alpine
 
 WORKDIR /srv/app
 
-# Копируем package.json отдельно для кэширования
+# Копируем только prod зависимости
 COPY package.json yarn.lock ./
-
-# Устанавливаем зависимости
 RUN yarn install --frozen-lockfile --production
 
-# Копируем ВСЕ файлы
-COPY . .
+# Копируем сборку и исходники
+COPY --from=builder /srv/app .
 
-# Собираем Strapi
-RUN yarn build
-
+# Экспонируем порт для internal Traefik
 EXPOSE 1337
 
-# Старт команда (Dokploy добавит свои переменные)
+# Запуск Strapi в production
 CMD ["yarn", "start"]
