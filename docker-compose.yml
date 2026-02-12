@@ -3,7 +3,7 @@ services:
     build: .
     container_name: strapi-app
     env_file:
-      - .env.production
+      - .env
     restart: unless-stopped
     volumes:
       - ./sqlite_data:/srv/app/data
