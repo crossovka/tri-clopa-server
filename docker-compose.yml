@@ -6,7 +6,7 @@ services:
       - .env.production
     restart: unless-stopped
     volumes:
-      - ./sqlite_data:/srv/app/.tmp
+      - ./sqlite_data:/srv/app/data
       - ./public/uploads:/srv/app/public/uploads
       - ./config:/srv/app/config
     environment:
