@@ -7,7 +7,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./sqlite_data:/srv/app/.tmp
-      - ./public/uploads:/srv/app/public/uploads
+      - ./uploads:/srv/app/public/uploads
       - ./config:/srv/app/config
     networks:
       - dokploy-network
